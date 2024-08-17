@@ -32,3 +32,55 @@
 *.tdo
 *.xml
 *.bcf
+
+# LaTeX intermediate and log files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+
+# LaTeX generated files
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nlo
+*.nls
+*.glo
+*.glg
+*.gls
+*.glsdefs
+*.ist
+
+# SyncTeX files
+*.synctex.gz
+
+# PDF files (if you don't want to include generated PDFs)
+*.pdf
+
+# Backup files
+*~
+*.bak
+*.sav
+*.backup
+
+# Temporary directories
+_TEXTEMP/
+_TEXTEMP_/
+
+# Specific editor files (e.g., for TeXShop)
+*.synctex(busy)
+
+# Specific to MacOS (if using Mac)
+.DS_Store
+
+# Specific to Windows
+Thumbs.db

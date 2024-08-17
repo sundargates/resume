@@ -1,0 +1,296 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage{settings}
+\usepackage{xspace}
+\addbibresource{own-bib.bib}
+\myname{Ananthanarayanan}{Sundaram}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeProjectTask}{\begin{itemize}[label=\textbf{--}]}
+% \newcommand{\endProjectTask}{\end{itemize}}
+
+\newcommand{\sq}{\textit{SubmitQueue}\xspace}
+\newcommand{\uci}{\textit{uCI}\xspace}
+
+\newcommand{\resumeTalkTitle}[1]{
+  \item{
+    \textbf{#1} 
+  }\vspace{-5pt}
+}
+
+\newcommand{\resumeTalk}[2]{
+  \item
+    \textit{#1} \hfill #2
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large{Sundaram Ananthanarayanan}} & \href{mailto:me@sundaram.io}{me@sundaram.io}\\
+  \href{https://www.sundaram.io/}{https://www.sundaram.io} & +1(650)-666-9264 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Stanford University}{Stanford, CA}
+{Master of Science in Electrical Engineering;  \textit{GPA: 3.9/4.0}}{Sep. 2012 -- Jun. 2014}
+\resumeSubheading
+{College of Engineering, Guindy, Anna University}{Chennai, India}
+{Bachelor of Engineering in Information Technology;  GPA: 9.32/10.0}{Aug. 2008 -- June. 2012}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Working Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Netflix}{Los Gatos, CA}
+{Staff Software Engineer}{Dec 2019 - Present}
+\resumeItemListStart
+\resumeItem{Mantis - Stream Processing Engine for Operational Data}
+{
+  Led the development of Mantis, a stream processing engine tailored to meet the operational data needs of Netflix.
+  \begin{itemize}[label=\textbf{--}]
+    \item
+          Transitioned Mantis from Apache Mesos to Kubernetes with an innovative architecture.
+          Guided a team of senior engineers from prototype to production and open-sourcing.
+          % \item
+          %       Directed a year-long migration effort, successfully moving thousands of Mantis Jobs to Kubernetes without user disruption.
+    \item
+          Achieved \$XX million in compute cost savings through ML-based container optimizations.
+    \item
+          Championed Mantis adoption to other companies including Stripe.
+  \end{itemize}
+}
+\resumeItem{Backfilling streaming data pipelines using data lakes}
+{
+  Teams building stream processing pipelines have to maintain separate batch jobs that pull data from warehouse during outages.
+  Developed a system that allows users to backfill using the same pipeline reducing maintence overhead.
+  \begin{itemize}[label=\textbf{--}]
+    \item
+          Designed the system to mimic Kafka properties when reading from Data Lakes, making it seamless to integrate.
+    \item
+          System adopted by 100s of pipelines within Netflix. Open-sourced the project which is used by other companies using Apache Iceberg.
+  \end{itemize}
+}
+\resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%  \resumeSubSubheading
+%   {Software Engineer I}{Oct 2014 -- Sep 2016}
+%   \resumeItemListStart
+%      \resumeItem{Apache Beam}
+%        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%   \resumeItemListEnd
+
+%-------------------------------------------
+
+\resumeSubheading
+{Uber}{San Francisco, CA}
+{Senior Software Engineer II}{May 2016 - Dec 2019}
+\resumeItemListStart
+\resumeItem{SubmitQueue}
+{
+  1000s of engineers committing changes concurrently to a repository leads to frequent master breakages.
+  Explored \& conceived a new system called \sq that guarantees an \textbf{always-green} master at scale. At Uber, \sq handles 1000s of commits/hr submitted by 1000s of engineers every day.
+  \begin{itemize}[label=\textbf{--}]
+    \item
+          Led a team of 5 engineers to build the system: reading papers on state-of-the-art techniques used in similar domains such as Databases, experimented with various approaches to find a scalable solution, \& architected the system to handle 1000s of changes/hr.
+    \item
+          Published a research paper presenting the design \& implementation of \sq at \href{https://doi.org/10.1145/3302424.3303970}{\textbf{Eurosys'19}}. Adrian Coyler has covered it as part of \href{https://blog.acolyer.org/2019/04/18/keeping-master-green-at-scale/}{\textit{the morning paper}}.
+  \end{itemize}
+}
+\resumeItem{uCI}
+{
+  Because existing open-source CI systems such as \href{https://jenkins.io/}{Jenkins} did not scale to Uber's needs, I helped build \uci - a large-scale distributed system to handle reliable execution of millions of stateful tasks every day on 1000s of CI machines.
+  \begin{itemize}[label=\textbf{--}]
+    \item
+          Led a team of 6 engineers to design a state-of-the-art cluster scheduler that handles faults gracefully (\textit{reliability}), exploits data locality to come up with optimal placements (\textit{performance}), scales horizontally on every layer (\textit{scalability}), and finally guarantees isolation at task/resource levels.
+          % \item
+          %       Designed the system leveraging existing open-source technologies such as \href{http://mesos.apache.org/}{Apache Mesos} for cluster management, \href{https://cadenceworkflow.io/}{Cadence} for workflow orchestration \& \href{https://www.docker.com/}{Docker} for executing tasks in a containerized environment.
+          % \item
+          %       Sped up build times for Android CI workflows by 4-6x, reducing hour-long workflows to order of minutes.
+  \end{itemize}
+}
+\resumeItemListEnd
+
+\resumeSubheading
+{Baidu Research Silicon Valley AI Lab}{Sunnyvale, CA}
+{Software Engineer}{Jan 2016 - May 2016}
+\resumeItemListStart
+\resumeItem{Speech Inference Infrastructure}
+{Designed \& productionized deep-learning based Speech Recognition APIs which power Android apps such as \href{https://techcrunch.com/2016/10/03/baidus-new-talktype-keyboard-app-emphasizes-voice-input-over-typing/}{TalkType}. }.
+\resumeItemListEnd
+
+\resumeSubheading
+{Twitter Inc}{San Francisco, CA}
+{Software Engineer}{Jun 2014 - Jan 2016}
+\resumeItemListStart
+\resumeItem{AddressBook Infrastructure}
+{
+  Engineered a system to store and retrieve contacts from the phone books of Twitter's 300M+ Monthly Active Users (MAUs).
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PREVIOUS-----------------
+\section{Ancient History}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Microsoft}{Redmond, WA}
+{Software Engineering Intern, Kernel Core Team}{Jun 2013 - Sep 2013}
+\resumeSubheading
+{Google Summer of Code}{Chennai, India}
+{Worked on Metalink Support for Google Chrome}{Jun 2012 - Sep 2012}
+\resumeSubheading
+{University of Waterloo}{Waterloo, Canada}
+{Research Intern - Worked on design \& application of One-Instruction Processors}{Apr. 2011 -- June. 2011}
+\resumeSubHeadingListEnd
+
+% --------SELECTED PUBLICATIONS------------
+\section{Selected Publications}
+\nocite{*}
+\printbibliography[heading={none}]
+
+
+%-----------TALKS-----------------
+\section{Selected Talks}
+\resumeSubHeadingListStart
+\resumeTalkTitle{Backfilling Streaming Data Pipelines using Kappa Architecture}
+{
+  \resumeItemListStart
+  \resumeTalk {Data + AI Summit, June 2022} {San Francisco, CA}
+  \resumeTalk {LinkedIn, March 2022} {Mountain View, CA}
+  \resumeTalk {Flink Forward, Nov 2021} {San Francisco, CA}
+  \resumeItemListEnd
+}
+\resumeTalkTitle{\href{https://www.sundaram.io/slides/submitqueue.pdf}{Keeping Master Green at Scale}}
+{
+  \resumeItemListStart
+  \resumeTalk {Twitter, Jan 2022} {San Francisco, CA}
+  \resumeTalk {Google Journal Club, May 2019} {San Francisco, CA}
+  \resumeTalk {Facebook, Jan 2019} {Menlo Park, CA}
+  \resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+
+% %-----------PROJECTS-----------------
+% \section{Projects}
+% \resumeSubHeadingListStart
+% \resumeSubItem{QuantSoftware Toolkit}
+% {Open source Python library for financial data analysis and machine learning for finance.}
+% \resumeSubItem{GitHub Visualization}
+% {Data visualization of Git log data using D3 to analyze project trends over time.}
+% \resumeSubItem{Recommendation System}
+% {Music and movie recommender systems using collaborative filtering on public datasets.}
+% \resumeSubItem{Mac Setup}
+% {Book that gives step-by-step instructions on setting up developer environment on macOS.}
+% \resumeSubHeadingListEnd
+
+%
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\item
+\textbf{Languages}{: Java, Python, Scala, C++}
+\item \vspace{-5pt}
+\textbf{Specialities}{: Distributed Systems, Stream Processing, Machine Learning}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
