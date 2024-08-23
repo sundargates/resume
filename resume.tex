@@ -169,9 +169,9 @@
 {Netflix}{Los Gatos, CA}
 {Staff Software Engineer, Data Platform}{Dec 2019 - Present}
 \resumeItemListStart
-\resumeItem{\href{https://netflix.github.io/mantis/}{Mantis}}
+\resumeItem{Mantis}
 {
-  Mantis is a stream processing engine developed at Netflix, designed to address the unique challenges posed by operational data.
+  \href{https://netflix.github.io/mantis/}{Mantis} is a stream processing engine developed at Netflix, designed to address the unique challenges posed by operational data.
   Over the past couple of years, I have been leading its development.
   \begin{itemize}[label=\textbf{--}]
     \item
@@ -190,7 +190,7 @@
   I have also contributed to the Flink ecosystem at Netflix - a stream processing engine for analytical needs.
   \begin{itemize}[label=\textbf{--}]
     % Teams building stream processing pipelines have to maintain separate batch jobs that pull data from warehouse during outages.
-    \item Created a \href{https://www.youtube.com/watch?v=tB4rx_W9Xqw}{system} enabling users to backfill Flink pipelines using Apache Iceberg, eliminating the need for separate batch jobs to pull data from the warehouse during outages.
+    \item Created a \href{https://www.youtube.com/watch?v=tB4rx_W9Xqw}{system} enabling users to backfill Flink pipelines using Apache Iceberg without code changes, eliminating the need to maintain separate batch jobs during outages.
     \item Designed the system to mimic Kafka properties when reading from Data Lakes, ensuring effortless integration.
     \item The system has been adopted by hundreds of pipelines within Netflix. Helped open-source the project, now utilized by other companies using Apache Iceberg.
   \end{itemize}
@@ -211,7 +211,7 @@
 {Uber}{San Francisco, CA}
 {Senior Software Engineer II, Developer Platform}{May 2016 - Dec 2019}
 \resumeItemListStart
-\resumeItem{\href{https://vimeo.com/358691692}{SubmitQueue}}
+\resumeItem{SubmitQueue}
 {
   1000s of engineers committing changes concurrently to a repository leads to frequent master breakages.
   Explored \& conceived a new system called \sq that guarantees an \textbf{always-green} master at scale. At Uber, \sq handles 1000s of commits/hr submitted by 1000s of engineers every day.
@@ -224,7 +224,7 @@
 }
 \resumeItem{uCI}
 {
-  Because existing open-source CI systems such as \href{https://jenkins.io/}{Jenkins} did not scale to Uber's needs, I helped build \uci - a distributed system to handle reliable execution of millions of stateful tasks every day on 1000s of CI machines.
+  Because existing open-source CI systems such as Jenkins did not scale to Uber's needs, I helped build \uci - a distributed system to handle reliable execution of millions of stateful tasks every day on 1000s of CI machines.
   \begin{itemize}[label=\textbf{--}]
     \item
           Led a team of 6 engineers to design a state-of-the-art cluster scheduler that handles faults gracefully (\textit{reliability}), exploits data locality to come up with optimal placements (\textit{performance}), scales horizontally on every layer (\textit{scalability}), and finally guarantees isolation at task/resource levels.
@@ -296,20 +296,6 @@
   \resumeItemListEnd
 }
 \resumeSubHeadingListEnd
-
-
-% %-----------PROJECTS-----------------
-% \section{Projects}
-% \resumeSubHeadingListStart
-% \resumeSubItem{QuantSoftware Toolkit}
-% {Open source Python library for financial data analysis and machine learning for finance.}
-% \resumeSubItem{GitHub Visualization}
-% {Data visualization of Git log data using D3 to analyze project trends over time.}
-% \resumeSubItem{Recommendation System}
-% {Music and movie recommender systems using collaborative filtering on public datasets.}
-% \resumeSubItem{Mac Setup}
-% {Book that gives step-by-step instructions on setting up developer environment on macOS.}
-% \resumeSubHeadingListEnd
 
 %
 %--------SKILLS------------
