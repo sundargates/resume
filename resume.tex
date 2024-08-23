@@ -13,7 +13,6 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-% \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -21,7 +20,38 @@
 
 \usepackage{settings}
 \usepackage{xspace}
+% \usepackage[style=numeric,maxnames=2]{biblatex}
 \addbibresource{own-bib.bib}
+
+\DeclareBibliographyAlias{article}{std}
+\DeclareBibliographyAlias{book}{std}
+\DeclareBibliographyAlias{booklet}{std}
+\DeclareBibliographyAlias{collection}{std}
+\DeclareBibliographyAlias{inbook}{std}
+\DeclareBibliographyAlias{incollection}{std}
+\DeclareBibliographyAlias{inproceedings}{std}
+\DeclareBibliographyAlias{manual}{std}
+\DeclareBibliographyAlias{misc}{std}
+\DeclareBibliographyAlias{online}{std}
+\DeclareBibliographyAlias{patent}{std}
+\DeclareBibliographyAlias{periodical}{std}
+\DeclareBibliographyAlias{proceedings}{std}
+\DeclareBibliographyAlias{report}{std}
+\DeclareBibliographyAlias{thesis}{std}
+\DeclareBibliographyAlias{unpublished}{std}
+\DeclareBibliographyAlias{*}{std}
+
+\DeclareBibliographyDriver{std}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit\newblock
+  \usebibmacro{booktitle}%
+  \newunit\newblock
+  \usebibmacro{finentry}}
+
 \myname{Ananthanarayanan}{Sundaram}
 
 \pagestyle{fancy}
@@ -103,7 +133,7 @@
 
 \newcommand{\resumeTalk}[2]{
   \item
-    \textit{#1} \hfill #2
+    \textit{#1}
 }
 
 %-------------------------------------------
@@ -115,7 +145,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large{Sundaram Ananthanarayanan}} & \href{mailto:me@sundaram.io}{me@sundaram.io}\\
-  \href{https://www.sundaram.io/}{https://www.sundaram.io} & +1(650)-666-9264 \\
+  \href{https://sundaram.io/about-me}{https://sundaram.io/about-me} & +1(650)-666-9264 \\
 \end{tabular*}
 
 
@@ -139,30 +169,30 @@
 {Netflix}{Los Gatos, CA}
 {Staff Software Engineer, Data Platform}{Dec 2019 - Present}
 \resumeItemListStart
-\resumeItem{\href{https://www.sundaram.io/slides/mantis.pdf}{Mantis - Stream Processing Engine for Operational Data}}
+\resumeItem{\href{https://netflix.github.io/mantis/}{Mantis}}
 {
-  Led the development of Mantis, a stream processing engine tailored to meet the operational data needs of Netflix.
+  Mantis is a stream processing engine developed at Netflix, designed to address the unique challenges posed by operational data.
+  Over the past couple of years, I have been leading its development.
   \begin{itemize}[label=\textbf{--}]
     \item
           Transitioned Mantis from Apache Mesos to Kubernetes with an innovative architecture.
           Guided a team of senior engineers from prototype to production and open-sourcing.
           % \item
-          %       Directed a year-long migration effort, successfully moving thousands of Mantis Jobs to Kubernetes without user disruption.
+          %       Directed a year-long migration effort, moving thousands of Mantis Jobs to Kubernetes without user disruption.
     \item
           Reduced annual compute costs by millions through ML-based container optimizations.
     \item
           Championed Mantis adoption to other companies including Stripe.
   \end{itemize}
 }
-\resumeItem{\href{https://www.youtube.com/watch?v=tB4rx_W9Xqw}{Backfilling streaming data pipelines using data lakes}}
+\resumeItem{Flink}
 {
-  Teams building stream processing pipelines have to maintain separate batch jobs that pull data from warehouse during outages.
-  Developed a system that allows users to backfill using the same pipeline reducing maintence overhead.
+  I have also contributed to the Flink ecosystem at Netflix - a stream processing engine for analytical needs.
   \begin{itemize}[label=\textbf{--}]
-    \item
-          Designed the system to mimic Kafka properties when reading from Data Lakes, making it seamless to integrate.
-    \item
-          System adopted by 100s of pipelines within Netflix. Helped open-source the project which is used by other companies using Apache Iceberg.
+    % Teams building stream processing pipelines have to maintain separate batch jobs that pull data from warehouse during outages.
+    \item Created a \href{https://www.youtube.com/watch?v=tB4rx_W9Xqw}{system} enabling users to backfill Flink pipelines using Apache Iceberg, eliminating the need for separate batch jobs to pull data from the warehouse during outages.
+    \item Designed the system to mimic Kafka properties when reading from Data Lakes, ensuring effortless integration.
+    \item The system has been adopted by hundreds of pipelines within Netflix. Helped open-source the project, now utilized by other companies using Apache Iceberg.
   \end{itemize}
 }
 \resumeItemListEnd
@@ -189,7 +219,7 @@
     \item
           Led a team of 5 engineers to build the system: reading papers on state-of-the-art techniques used in similar domains such as Databases, experimented with various approaches to find a scalable solution, \& architected the system to handle 1000s of changes/hr.
     \item
-          Published a research paper presenting the design \& implementation of \sq at \href{https://doi.org/10.1145/3302424.3303970}{\textbf{Eurosys'19}}. Adrian Coyler has covered it as part of \href{https://blog.acolyer.org/2019/04/18/keeping-master-green-at-scale/}{\textit{the morning paper}}.
+          Published a research paper presenting the design \& implementation of \sq at \href{https://doi.org/10.1145/3302424.3303970}{\textbf{Eurosys'19}}.
   \end{itemize}
 }
 \resumeItem{uCI}

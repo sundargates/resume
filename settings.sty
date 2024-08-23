@@ -1,24 +1,24 @@
-\RequirePackage[backend=biber,sorting=ydnt,uniquename=init,minnames=2,maxnames=7]{biblatex}
+\RequirePackage[backend=biber,sorting=ydnt,uniquename=init,minnames=2,maxnames=2]{biblatex}
 
 \newcommand{\myname}[2]{%
-   \def\@mylastname{#1}%
-   \def\@myfirstname{#2}%
+  \def\@mylastname{#1}%
+  \def\@myfirstname{#2}%
 }
 
 \renewcommand*{\mkbibnamefamily}[1]{%
   \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\@mylastname}}
-               and
-               test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
-    {\textbf{#1}}%
-    {#1}%
+    and
+    test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
+  {\textbf{#1}}%
+  {#1}%
 }
 
 \renewcommand*{\mkbibnamegiven}[1]{%
   \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\@mylastname}}
-               and
-               test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
-    {\textbf{#1}}%
-    {#1}%
+    and
+    test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
+  {\textbf{#1}}%
+  {#1}%
 }
 
 \RequirePackage[colorlinks=true,allcolors=black,breaklinks=true]{hyperref}
