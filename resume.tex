@@ -136,6 +136,12 @@
     \textit{#1}
 }
 
+\newcommand{\role}[1]{
+  \vspace{5pt}
+  \small{#1}
+  \vspace{-5pt}
+}
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -145,20 +151,8 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large{Sundaram Ananthanarayanan}} & \href{mailto:me@sundaram.io}{me@sundaram.io}\\
-  \href{https://sundaram.io/about-me}{https://sundaram.io/about-me} & +1(650)-666-9264 \\
+  \textit{\small{Detailed Resume}} \href{https://sundaram.io/about-me}{https://sundaram.io/about-me} & +1(650)-666-9264 \\
 \end{tabular*}
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Stanford University}{Stanford, CA}
-{Master of Science in Electrical Engineering;  \textit{GPA: 3.9/4.0}}{Sep. 2012 -- Jun. 2014}
-\resumeSubheading
-{College of Engineering, Guindy, Anna University}{Chennai, India}
-{Bachelor of Engineering in Information Technology;  GPA: 9.32/10.0}{Aug. 2008 -- June. 2012}
-\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
@@ -168,17 +162,19 @@
 \resumeSubheading
 {Netflix}{Los Gatos, CA}
 {Staff Software Engineer, Data Platform}{Dec 2019 - Present}
+% say that I am one of the leads on the data platform team spearheading projects that are both deep and wide in scope.
+
+\role{I am one of the leads on the data platform team at Netflix, spearheading projects in the data processing space that are both deep and wide in scope.}
 \resumeItemListStart
 \resumeItem{Mantis}
 {
   \href{https://netflix.github.io/mantis/}{Mantis} is a stream processing engine developed at Netflix, designed to address the unique challenges posed by operational data.
+  Mantis handles 50k+ jobs/day, processing 100 PBs of data on 30k+ containers.
   Over the past couple of years, I have been leading its development.
   \begin{itemize}[label=\textbf{--}]
     \item
           Transitioned Mantis from Apache Mesos to Kubernetes with an innovative architecture.
-          Guided a team of senior engineers from prototype to production and open-sourcing.
-          % \item
-          %       Directed a year-long migration effort, moving thousands of Mantis Jobs to Kubernetes without user disruption.
+          Guided a team of senior engineers from prototype to production, year-long migration and open-sourcing.
     \item
           Reduced annual compute costs by millions through ML-based container optimizations.
     \item
@@ -190,7 +186,7 @@
   I have also contributed to the Flink ecosystem at Netflix - a stream processing engine for analytical needs.
   \begin{itemize}[label=\textbf{--}]
     % Teams building stream processing pipelines have to maintain separate batch jobs that pull data from warehouse during outages.
-    \item Created a \href{https://www.youtube.com/watch?v=tB4rx_W9Xqw}{system} enabling users to backfill Flink pipelines using Apache Iceberg without code changes, eliminating the need to maintain separate batch jobs during outages.
+    \item Created a \href{https://sundaram.io/slides/dais22.pdf}{system} enabling users to backfill Flink pipelines using Apache Iceberg without code changes, eliminating the need to maintain separate batch jobs during outages.
     \item Designed the system to mimic Kafka properties when reading from Data Lakes, ensuring effortless integration.
     \item The system has been adopted by hundreds of pipelines within Netflix. Helped open-source the project, now utilized by other companies using Apache Iceberg.
   \end{itemize}
@@ -210,6 +206,9 @@
 \resumeSubheading
 {Uber}{San Francisco, CA}
 {Senior Software Engineer II, Developer Platform}{May 2016 - Dec 2019}
+
+
+\role{I was one of the leads on the Developer Platform team at Uber, responsible for building systems that enable 1000s of engineers to develop, test, and deploy code at scale.}
 \resumeItemListStart
 \resumeItem{SubmitQueue}
 {
@@ -253,7 +252,20 @@
   Engineered a system to store and retrieve contacts from the phone books of Twitter's 300M+ Monthly Active Users (MAUs).
 }
 \resumeItemListEnd
+\resumeSubHeadingListEnd
 
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Stanford University}{Stanford, CA}
+{Master of Science in Electrical Engineering;  \textit{GPA: 3.9/4.0}}{Sep. 2012 -- Jun. 2014}
+\resumeSubheading
+{College of Engineering, Guindy, Anna University}{Chennai, India}
+{Bachelor of Engineering in Information Technology;  GPA: 9.32/10.0}{Aug. 2008 -- June. 2012}
+
+\vspace{3pt}
+\small{\textit{\href{https://www.mitacs.ca/our-innovation-insights/outstanding-young-researchers-honoured-at-mitacs-inaugural-awards-ceremony/}{Mitacs Outstanding Undergraduate Research Award}}}
 \resumeSubHeadingListEnd
 
 %-----------PREVIOUS-----------------
